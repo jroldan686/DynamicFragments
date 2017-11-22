@@ -85,6 +85,37 @@ public class FragmentA extends Fragment {
     public void onDetach() {
         super.onDetach();
         Log.d("FrmAOnDetach", "Ejecutando onDetach() del FragmentA");
+        // Borra los datos para evitar llamar dos veces al Fragment
         mCallBack = null;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d("FrmAOnStart", "Ejecutando onStart() del FragmentA");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d("FrmAOnPause", "Ejecutando onPause() del FragmentA");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d("FrmAOnStop", "Ejecutando onStop() del FragmentA");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d("FrmAOnDestroy", "Ejecutando onDestroy() del FragmentA");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d("FrmAOnDestroyView", "Ejecutando onDestroyView() del FragmentA");
     }
 }
