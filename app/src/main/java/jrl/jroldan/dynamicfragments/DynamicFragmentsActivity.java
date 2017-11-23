@@ -5,7 +5,6 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 public class DynamicFragmentsActivity extends Activity implements FragmentA.FragmentAListener {
@@ -25,7 +24,7 @@ public class DynamicFragmentsActivity extends Activity implements FragmentA.Frag
 
         frmA = fragmentManager.findFragmentByTag(FragmentA.TAG);
         if(frmA == null) {
-            frmA = new FragmentA();
+            frmA = new Fragment();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             // El método add() crea y añade un nuevo fragment
             fragmentTransaction.add(android.R.id.content, frmA);
